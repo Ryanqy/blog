@@ -1,4 +1,4 @@
-@charset "gb2312";
+@charset "UTF-8";
 /* CSS Document */
 h1.t_nav span { float: right; color: #999; background:url(../images/5849.png) no-repeat left center; padding-left:20px }
 h1.t_nav span a { margin: 0 5px }
