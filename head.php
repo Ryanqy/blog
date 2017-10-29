@@ -7,3 +7,5 @@
     <script src="js/modernizr.js"></script>
     <![endif]-->
 </head>
+
+<?php include_once "init.php"?>
