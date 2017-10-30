@@ -1,30 +1,12 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>杨青个人博客网站―一个站在web前段设计之路的女技术员个人博客网站</title>
-    <meta name="keywords" content="个人博客,杨青个人博客,个人博客模板,杨青"/>
-    <meta name="description" content="杨青个人博客，是一个站在web前端设计之路的女程序员个人网站，提供个人博客模板免费资源下载的个人原创网站。"/>
-    <link href="css/base.css" rel="stylesheet">
-    <link href="css/about.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/modernizr.js"></script>
-    <![endif]-->
-    <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-</head>
+<?php include_once "head.php" ?>
 <body>
-<header>
-    <div id="logo"><a href="/"></a></div>
-    <nav class="topnav" id="topnav"><a href="index.php"><span>首页</span><span class="en">Protal</span></a><a
-            href="about.html"><span>关于我</span><span class="en">About</span></a><a
-            href="newlist.html"><span>慢生活</span><span class="en">Life</span></a><a
-            href="moodlist.html"><span>碎言碎语</span><span class="en">Doing</span></a><a
-            href="share.html"><span>模板分享</span><span class="en">Share</span></a><a
-            href="knowledge.html"><span>学无止境</span><span class="en">Learn</span></a><a href="book.html"><span>留言版</span><span
-            class="en">Gustbook</span></a></nav>
-</header>
+<?php include_once "header.php" ?>
 <article class="aboutcon">
-    <h1 class="t_nav"><span>像“草根”一样，紧贴着地面，低调的存在，冬去春来，枯荣无恙。</span><a href="/" class="n1">网站首页</a><a href="/" class="n2">关于我</a>
+    <h1 class="t_nav">
+        <span>像“草根”一样，紧贴着地面，低调的存在，冬去春来，枯荣无恙。</span>
+        <a href="/" class="n1">网站首页</a><a href="/" class="n2">关于我</a>
     </h1>
     <div class="about left">
         <h2>Just about me</h2>
@@ -65,9 +47,6 @@
         </div>
     </aside>
 </article>
-<footer>
-    <p>Design by DanceSmile <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11002373号-1</a> <a href="/">网站统计</a></p>
-</footer>
-<script src="js/silder.js"></script>
+<?php include_once "footer.php"?>
 </body>
 </html>

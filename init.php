@@ -19,7 +19,7 @@ function connect_database()
     return $connection;
 }
 
-function get_posts($post_id = null, $category_id = null, $page_size = 6, $page_index = 0)
+function get_posts($category_id = null, $post_id = null, $page_size = 4, $page_index = 0)
 {
 
     $connection = connect_database();
@@ -34,7 +34,7 @@ function get_posts($post_id = null, $category_id = null, $page_size = 6, $page_i
 
     if (isset($category_id)) {
         $category_id = (int)$category_id;
-        $query .= "categories.category_id = {$category_id}";
+        $query .= " and categories.category_id = {$category_id}";
     }
 
     $query .= " order by posts.post_id desc" . " limit " . $page_size * $page_index . ' , ' . $page_size;
