@@ -71,7 +71,8 @@ $posts = get_posts();
                     src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=1"></iframe>
         </div>
         <?php include_once "aside.php" ?>
-        <a href="/" class="weixin"> </a></aside>
+        <a href="/" class="weixin"> </a>
+    </aside>
 </article>
 <?php include_once "footer.php" ?>
 </body>
