@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
-<?php include_once "head.php" ?>
+<?php include_once "head_begin.php" ?>
+<link href="css/style.css" rel="stylesheet">
+<?php include_once "head_end.php" ?>
 <body>
 <?php include_once "header.php" ?>
 
