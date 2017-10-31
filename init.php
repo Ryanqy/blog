@@ -2,6 +2,8 @@
 
 date_default_timezone_set('Asia/Shanghai');
 
+define("PAGE_SIZE", 4);
+
 function connect_database()
 {
 
@@ -21,7 +23,23 @@ function connect_database()
     return $connection;
 }
 
-function get_posts($category_id = null, $post_id = null, $page_size = 4, $page_index = 0)
+function get_total_posts($category_id = null){
+    $connection = connect_database();
+    $query = "select count(*) as total from posts";
+    if (isset($category_id)) {
+        $query .= "where category_id = {$category_id}";
+    }
+
+    $result = mysqli_query($connection, $query);
+
+    $data=mysqli_fetch_assoc($result);
+
+    mysqli_close($connection);
+
+    return $data['total'];
+}
+
+function get_posts($category_id = null, $post_id = null, $page_index = 0, $page_size = null)
 {
 
     $connection = connect_database();
@@ -37,6 +55,10 @@ function get_posts($category_id = null, $post_id = null, $page_size = 4, $page_i
     if (isset($category_id)) {
         $category_id = (int)$category_id;
         $query .= " and categories.category_id = {$category_id}";
+    }
+
+    if (!isset($page_size)) {
+        $page_size = constant("PAGE_SIZE");
     }
 
     $query .= " order by posts.post_id desc" . " limit " . $page_size * $page_index . ' , ' . $page_size;

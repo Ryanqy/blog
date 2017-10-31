@@ -2,12 +2,23 @@
 <html>
 <?php include_once "head_begin.php" ?>
 <link href="css/index.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 <?php include_once "head_end.php" ?>
 <body>
 <?php include_once "header.php" ?>
 
 <?php
+if (isset($_GET['page_index'])) {
+    $page_index = $_GET['page_index'];
+} else {
+    $page_index = 0;
+}
 $posts = get_posts();
+$total_posts = get_total_posts();
+
+if ($page_index + 1 > ($total_posts / constant("PAGE_SIZE"))) {
+    $page_index = ($total_posts / constant("PAGE_SIZE")) - 1;
+}
 ?>
 <div class="banner">
     <section class="box">
@@ -45,11 +56,14 @@ $posts = get_posts();
             <figure><img src="images/001.png"></figure>
             <ul>
                 <p><?php echo $post['summary'] ?>...</p>
-                <a title="/" href="/" target="_blank" class="readmore">阅读全文>></a>
+                <a title="<?php echo $post['title'] ?>"
+                   href="/post.php?post_id=<?php echo $post['post_id'] ?>&category_id=<?php echo $post['category_id'] ?>"
+                   target="_self" class="readmore">阅读全文>></a>
             </ul>
             <p class="dateview">
-                <span><?php echo date("Y-m-d", strtotime($post['create_time'])) ?></span><span>作者：<?php echo $post['author_name'] ?></span><span>个人博客：[<a
-                            href="/news/life/">程序人生</a>]</span>
+                <span><?php echo date("Y-m-d", strtotime($post['create_time'])) ?></span>
+                <span>作者：<?php echo $post['author_name'] ?></span>
+                <span>个人博客：[<a href="/news/life/">程序人生</a>]</span>
             </p>
         <?php } ?>
 
@@ -59,12 +73,19 @@ $posts = get_posts();
         </div>
         <div class="page">
             <a title="Total record">
-                <b>41</b>
+                <b><?php echo $total_posts ?></b>
             </a>
-            <b>1</b>
-            <a href="/news/s/index_2.html">2</a>
-            <a href="/news/s/index_2.html">&gt;</a>
-            <a href="/news/s/index_2.html">&gt;&gt;</a>
+            <?php if ($page_index != 0) { ?>
+                <a href="/index.php?page_index=<?php echo $page_index + 1 ?>">&lt;&lt;</a>
+                <a href="/index.php?page_index=<?php echo $page_index ?>">&lt;</a>
+                <a href="/index.php?page_index=<?php echo $page_index ?>"><?php echo $page_index ?></a>
+            <?php } ?>
+            <b><?php echo $page_index + 1 ?></b>
+            <?php if ($page_index != ($total_posts / constant("PAGE_SIZE")) -1) { ?>
+                <a href="/index.php?page_index=<?php echo $page_index + 1 ?>"><?php echo $page_index + 2 ?></a>
+                <a href="/index.php?page_index=<?php echo $page_index + 1 ?>">&gt;</a>
+                <a href="/index.php?page_index=<?php echo $page_index + ($total_posts / constant("PAGE_SIZE")) ?>">&gt;&gt;</a>
+            <?php } ?>
         </div>
     </div>
     <aside class="right">
@@ -73,7 +94,7 @@ $posts = get_posts();
                     src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=1"></iframe>
         </div>
         <?php include_once "aside.php" ?>
-        <a href="/" class="weixin"> </a>
+        <a href="/" title="微信" class="weixin"> </a>
     </aside>
 </article>
 <?php include_once "footer.php" ?>
