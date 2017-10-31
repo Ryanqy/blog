@@ -23,16 +23,17 @@ function connect_database()
     return $connection;
 }
 
-function get_total_posts($category_id = null){
+function get_total_posts($category_id = null)
+{
     $connection = connect_database();
     $query = "select count(*) as total from posts";
     if (isset($category_id)) {
-        $query .= "where category_id = {$category_id}";
+        $query .= " where category_id = {$category_id}";
     }
 
     $result = mysqli_query($connection, $query);
 
-    $data=mysqli_fetch_assoc($result);
+    $data = mysqli_fetch_assoc($result);
 
     mysqli_close($connection);
 
