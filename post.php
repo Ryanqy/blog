@@ -2,6 +2,7 @@
 <html>
 <?php include_once "head_begin.php" ?>
 <link href="css/style.css" rel="stylesheet">
+<link href="css/post.css" rel="stylesheet">
 <?php include_once "head_end.php" ?>
 <body>
 <?php include_once "header.php" ?>
@@ -16,6 +17,12 @@ $post = current($posts);
         <a href="/" class="n1">网站首页</a><a href="/" class="n2">慢生活</a>
     </h1>
     <div class="newblog left">
+        <h1 class="title"><?php echo $post['title']?></h1>
+        <p class="box">
+            <span class="time">发布时间: <?php echo date("Y-m-d", strtotime($post['create_time'])) ?></span>
+            <span class="">编辑:<a href="mailto:547527682@qq.com">两条鱼</a></span>
+            <span>阅读 (51)</span>
+        </p>
         <?php echo $post['contents'] ?>
     </div>
     <aside class="right">

@@ -7,6 +7,6 @@
         <a href="moodlist.php"><span>碎言碎语</span><span class="en">Doing</span></a>
         <a href="share.php"><span>模板分享</span><span class="en">Share</span></a>
         <a href="knowledge.php"><span>学无止境</span><span class="en">Learn</span></a>
-        <a href="book.html"><span>留言版</span><span class="en">Gustbook</span></a>
+        <a href="book.php"><span>留言版</span><span class="en">Gustbook</span></a>
     </nav>
 </header>

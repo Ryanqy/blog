@@ -31,24 +31,22 @@
     </div>
     <aside class="right">
         <div class="about_c">
-            <p>网名：<span>DanceSmile</span> | 即步非烟</p>
-            <p>姓名：杨青 </p>
-            <p>生日：1987-10-30</p>
-            <p>籍贯：四川省―成都市</p>
-            <p>现居：天津市―滨海新区</p>
-            <p>职业：网站设计、网站制作</p>
-            <p>喜欢的书：《红与黑》《红楼梦》</p>
-            <p>喜欢的音乐：《burning》《just one last dance》《相思引》</p>
-            <a target="_blank"
-               href="http://wp.qq.com/wpa/qunwpa?idkey=d4d4a26952d46d564ee5bf7782743a70d5a8c405f4f9a33a60b0eec380743c64">
-                <img src="http://pub.idqqimg.com/wpa/images/group.png" alt="杨青个人博客网站" title="杨青个人博客网站"></a>
-            <a target="_blank"
-               href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=HHh9cn95b3F1cHVye1xtbTJ-c3E"><img
-                    src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_22.png"
-                    alt="杨青个人博客网站"></a>
+            <p>网名：<span>Ryanqy</span> | 两条鱼</p>
+            <p>姓名：吴通 </p>
+            <p>生日：1991-04-30</p>
+            <p>籍贯：湖南省―永州市</p>
+            <p>现居：广州市―荔湾区</p>
+            <p>职业：程序猿</p>
+            <p>喜欢的书：《万历十五年》《潜规则:中国历史中的真实游戏》</p>
+            <p>喜欢的音乐：《遇见》《2003》《Just Blue》</p>
+            <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=b7e863eb78fb09658344fc2c07d51fced318068264543b68a0e5ac0f57e9c42a">
+                <img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Java &amp; MySql" title="Java &amp; MySql"></a>
+            <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=nKmoq6muq6qkrtzt7bL-8-E" style="text-decoration:none;">
+                <img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_02.png"/></a>
         </div>
     </aside>
 </article>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="http://music.163.com/outchain/player?type=2&id=29600656&auto=1&height=90"></iframe>
 <?php include_once "footer.php"?>
 </body>
 </html>

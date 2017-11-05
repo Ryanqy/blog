@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.newblog {
+    width: 740px;
+    overflow: hidden;
+    background: url(../images/r_line.jpg) repeat-y right;
+    line-height: 22px;
+}
+
+.newblog .title {
+    font-size: 22px;
+    margin: 20px 0;
+    text-align: center;
+    color: #333;
+}
+
+.newblog .box {
+    border: #ccc 1px dashed;
+    text-align: center;
+    padding: 5px 0;
+    margin-right: 30px;
+    color: #999;
+}
+
+.newblog p {
+    margin-bottom: 10px;
+}
