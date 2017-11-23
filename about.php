@@ -28,6 +28,7 @@
         <p>服务器：阿里云服务器<a href="/" class="blog_link" target="_blank">购买空间</a></p>
         <p>备案号：蜀ICP备11002373号-1</p>
         <p>程 序：PHP 帝国CMS7.0</p>
+        <iframe style="#player {margin: 0;}" frameborder="no" marginwidth="0" marginheight="0" width=330 height=110 src="http://music.163.com/outchain/player?type=2&id=29600656&auto=1&height=90"></iframe>
     </div>
     <aside class="right">
         <div class="about_c">
@@ -46,7 +47,6 @@
         </div>
     </aside>
 </article>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="http://music.163.com/outchain/player?type=2&id=29600656&auto=1&height=90"></iframe>
 <?php include_once "footer.php"?>
 </body>
 </html>
